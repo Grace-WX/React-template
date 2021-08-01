@@ -12,7 +12,7 @@ ReactDOM.render(
       {mainRouters.map(route => {
         return <Route key={route.path} {...route} />
       })}
-      <Redirect to="/404" />
+      <Redirect to="/login" />
     </Switch>
   </Router>,
   document.getElementById('root')
