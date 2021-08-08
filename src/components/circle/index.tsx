@@ -5,18 +5,19 @@ import './index.css';
 // 环形上传动画，可用作上传axios请求的进度展示
 export default memo(function Index() {
 
-    const [num, setNum] = useState(0);
-    const [leftDeg, setLeftDeg] = useState(180);
-    const [rightDeg, setRightDeg] = useState(0);
+    const [num, setNum] = useState<number>(0);
+    const [leftDeg, setLeftDeg] = useState<number>(180);
+    const [rightDeg, setRightDeg] = useState<number>(0);
 
-    //loader,total可以作为外部参数
     let loader = 0;
-    const total = 1500;
+    const total: number = 1500;
 
     useEffect(() => {
         const timer = setInterval(() => {
-            let currentNum = Number((loader / total) * 100).toFixed(1);
-            let currentDeg = Number((loader / total) * 360).toFixed(0);
+            // toFixed（）返回的是个字符串，如果需要转成number使用我们可以使用+运算符的类型转换规则（不能转undefined，对象），所以更优解是采用位取反运算符~~。
+            // ~~{}=0，显然我们也可以用~~判断空对象了，来替代Object.keys({}).length===0
+            let currentNum: number = +((loader / total) * 10).toFixed(1);
+            let currentDeg: number = +((loader / total) * 360).toFixed(0);
             if (currentNum > 100) {
                 clearInterval(timer)
             } else {
