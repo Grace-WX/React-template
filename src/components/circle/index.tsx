@@ -15,7 +15,6 @@ export default memo(function Index() {
     useEffect(() => {
         const timer = setInterval(() => {
             // toFixed（）返回的是个字符串，如果需要转成number使用我们可以使用+运算符的类型转换规则（不能转undefined，对象），所以更优解是采用位取反运算符~~。
-            // ~~{}=0，显然我们也可以用~~判断空对象了，来替代Object.keys({}).length===0
             let currentNum: number = +((loader / total) * 10).toFixed(1);
             let currentDeg: number = +((loader / total) * 360).toFixed(0);
             if (currentNum > 100) {

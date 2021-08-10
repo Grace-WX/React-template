@@ -1,11 +1,13 @@
 import React, { memo } from 'react';
 import './index.css';
 import Circle from '../../components/circle';
+import BlurryLoading from '../../components/blurryLoading';
 
-const animation = memo(function index(props) {
+const animation = memo(function Index(props) {
     return (
         <div>
-            <Circle />
+            {/* <Circle /> */}
+            <BlurryLoading />
         </div>
     )
 })
