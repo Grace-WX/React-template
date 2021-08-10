@@ -10,16 +10,27 @@ export default memo(function BlurryLoading() {
     };
 
 
+    // useEffect(() => {
+    //     const timer = setInterval(() => {
+    //         if (initLoad > 99) {
+    //             clearInterval(timer)
+    //         } else {
+    //             initLoad++
+    //             setLoad(initLoad)
+    //         }
+    //     }, 30)
+    // }, [initLoad])
+
     useEffect(() => {
         const timer = setInterval(() => {
-            if (initLoad > 99) {
+            if (load > 99) {
                 clearInterval(timer)
             } else {
-                initLoad++
-                setLoad(initLoad)
+                setLoad(load => load + 1)
             }
         }, 30)
-    }, [initLoad])
+    }, [])
+
 
     const loadingOpacticy = scale(load, 0, 100, 1, 0);
     const blurryFilter = scale(load, 0, 100, 30, 0);
