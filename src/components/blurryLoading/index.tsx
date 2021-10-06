@@ -3,23 +3,10 @@ import './index.css';
 
 export default memo(function BlurryLoading() {
     const [load, setLoad] = useState<number>(0);
-    let initLoad = 0;
 
     const scale = (num: number, in_min: number, in_max: number, out_min: number, out_max: number) => {
         return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
     };
-
-
-    // useEffect(() => {
-    //     const timer = setInterval(() => {
-    //         if (initLoad > 99) {
-    //             clearInterval(timer)
-    //         } else {
-    //             initLoad++
-    //             setLoad(initLoad)
-    //         }
-    //     }, 30)
-    // }, [initLoad])
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -29,7 +16,7 @@ export default memo(function BlurryLoading() {
                 setLoad(load => load + 1)
             }
         }, 30)
-    }, [])
+    }, [load])
 
 
     const loadingOpacticy = scale(load, 0, 100, 1, 0);

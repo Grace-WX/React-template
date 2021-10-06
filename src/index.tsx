@@ -12,7 +12,7 @@ ReactDOM.render(
       {mainRouters.map(route => {
         return <Route key={route.path} {...route} />
       })}
-      <Redirect to="/admin/homePage" />
+      <Redirect to="/admin/tabTest" />
     </Switch>
   </Router>,
   document.getElementById('root')

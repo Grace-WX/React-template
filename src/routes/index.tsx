@@ -2,6 +2,7 @@ import Login from '../pages/login/index';
 import PageNotFound from '../pages/404/index';
 import HomePage from '../pages/homePage/index';
 import Animation from '../pages/animation';
+import TabTest from '../pages/tabTest';
 
 
 export const mainRouters = [
@@ -23,6 +24,11 @@ export const adminRouters = [
     {
         path: '/admin/animation',
         component: Animation,
+        exact: true
+    },
+    {
+        path: '/admin/tabTest',
+        component: TabTest,
         exact: true
     },
 ]

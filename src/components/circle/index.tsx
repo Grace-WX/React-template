@@ -1,7 +1,6 @@
-import React, { memo, useRef, useState, useEffect } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import './index.css';
 
-// react组件必须大写
 // 环形上传动画，可用作上传axios请求的进度展示
 export default memo(function Index() {
 

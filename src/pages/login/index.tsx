@@ -1,9 +1,9 @@
-import React, { memo, useRef, useState, useEffect } from 'react';
+import React, { memo, useState, } from 'react';
 import './index.css';
 
 const Login = memo(function Index(props) {
 
-    const ref = useRef(null);
+    // const ref = useRef(null);
     const [bgMove, setBgMove] = useState({ bgX: 0, bgY: 0 });
     const [boxMove, setBoxMove] = useState({ boxX: 0, boxY: 0 });
 

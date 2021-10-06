@@ -27,7 +27,16 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-undef": "off",
+      "no-restricted-globals": "off",
+      "no-unused-vars": "off",
+      "no-": "off",
+      "no-debugger":"off",
+      "no-console": "off",
+      "no-empty":"off"
+    }
   },
   "browserslist": {
     "production": [
