@@ -3,6 +3,7 @@ import PageNotFound from '../pages/404/index';
 import HomePage from '../pages/homePage/index';
 import Animation from '../pages/animation';
 import TabTest from '../pages/tabTest';
+import FormTest from '../pages/formTest';
 
 
 export const mainRouters = [
@@ -29,6 +30,11 @@ export const adminRouters = [
     {
         path: '/admin/tabTest',
         component: TabTest,
+        exact: true
+    },
+    {
+        path: '/admin/formTest',
+        component: FormTest,
         exact: true
     },
 ]

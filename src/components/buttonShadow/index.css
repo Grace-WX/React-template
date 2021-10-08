@@ -1,0 +1,30 @@
+.shadow{
+    display: inline-block;
+    color: #eff6ec;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 8px 0 #004d2f, 0 10px 15px rgba(0,0,0,.35);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.title{
+    display: inline-block;
+    font-size: 2em;
+    font-family: arial;
+    padding: .625em 1em;
+    background: #008752;
+    background-image: linear-gradient(#008752, #007849);
+    border-top: 1px solid rgba(255,255,255,.2);   
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out; 
+}
+
+.shadow:hover{
+    box-shadow: 0 4px 0 #004d2f, 0 7px 10px rgba(0,0,0,.05);
+}
+
+.shadow:hover title{
+    transform: translateY(4px);
+}
