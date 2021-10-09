@@ -1,5 +1,8 @@
 module.exports = {
-    "extends": "react-app",
+    "extends": [
+        "react-app",
+        "plugin:@typescript-eslint/recommended"
+    ],
     "rules": {
         "no-multi-spaces": 1,
         "react/jsx-space-before-closing": 1, // 总是在自动关闭的标签前加一个空格，正常情况下也不需要换行
@@ -13,5 +16,6 @@ module.exports = {
         "react/jsx-pascal-case": 1, // React模块名使用帕斯卡命名，实例使用骆驼式命名
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": ["off"],
+        "@typescript-eslint/no-unused-vars-experimental": "error"
     }
 }

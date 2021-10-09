@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-decorators": "^7.15.8",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.13",
     "@types/react": "^17.0.16",
@@ -33,9 +34,9 @@
       "no-restricted-globals": "off",
       "no-unused-vars": "off",
       "no-": "off",
-      "no-debugger":"off",
+      "no-debugger": "off",
       "no-console": "off",
-      "no-empty":"off"
+      "no-empty": "off"
     }
   },
   "browserslist": {
